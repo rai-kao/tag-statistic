@@ -1,0 +1,130 @@
+{
+    "output": "console",
+    "outputFile": "result.txt",
+    "filters": [
+        {
+            "isEnabled": true,
+            "rules": [
+                {
+                    "tag": "img",
+                    "assessMode": "single",
+                    "condition": [
+                        {
+                            "method": "to.have.deep.property",
+                            "args": "attribs.alt"
+                        }
+                    ],
+                    "error": "There are %d <img> tag without alt attribute"
+                }
+            ]
+        },
+        {
+            "isEnabled": true,
+            "rules": [
+                {
+                    "tag": "a",
+                    "assessMode": "single",
+                    "condition": [
+                        {
+                            "method": "to.have.deep.property",
+                            "args": "attribs.rel"
+                        }
+                    ],
+                    "error": "There are %d <a> tag without rel attribute"
+                }
+            ]
+        },
+        {
+            "isEnabled": true,
+            "rules": [
+                {
+                    "parent": "head",
+                    "tag": "title",
+                    "assessMode": "batch",
+                    "condition": [
+                        {
+                            "method": "to.containSubset",
+                            "args": [
+                                {
+                                    "name": "title"
+                                }
+                            ]
+                        }
+                    ],
+                    "error": "HTML without <title> tag"
+                },
+                {
+                    "parent": "head",
+                    "tag": "meta",
+                    "assessMode": "batch",
+                    "condition": [
+                        {
+                            "method": "to.containSubset",
+                            "args": [
+                                {
+                                    "name": "meta",
+                                    "attribs": {
+                                        "name": "descriptions"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "error": "<head> without <meta name='descriptions' ... /> tag"
+                },
+                {
+                    "parent": "head",
+                    "tag": "meta",
+                    "assessMode": "batch",
+                    "condition": [
+                        {
+                            "method": "to.containSubset",
+                            "args": [
+                                {
+                                    "name": "meta",
+                                    "attribs": {
+                                        "name": "keywords"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "error": "<head> without <meta name='keywords' ... /> tag"
+                }
+            ]
+        },
+        {
+            "isEnabled": true,
+            "rules": [
+                {
+                    "parent": "",
+                    "tag": "strong",
+                    "assessMode": "batch",
+                    "condition": [
+                        {
+                            "method": "length.to.be.below",
+                            "args": 15
+                        }
+                    ],
+                    "error": "There are more than 15 <strong> tag in HTML"
+                }
+            ]
+        },
+        {
+            "isEnabled": true,
+            "rules": [
+                {
+                    "tag": "h1",
+                    "assessMode": "batch",
+                    "condition": [
+                        {
+                            "method": "length.to.be.below",
+                            "args": 1
+                        }
+                    ],
+                    "error": "There are more than one <h1> tag in HTML"
+                }
+            ]
+        }
+    ]
+}
