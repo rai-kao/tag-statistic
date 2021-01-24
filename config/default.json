@@ -10,7 +10,7 @@
                     "assessMode": "single",
                     "condition": [
                         {
-                            "method": "to.have.deep.property",
+                            "method": "to.have.nested.property",
                             "args": "attribs.alt"
                         }
                     ],
@@ -26,7 +26,7 @@
                     "assessMode": "single",
                     "condition": [
                         {
-                            "method": "to.have.deep.property",
+                            "method": "to.have.nested.property",
                             "args": "attribs.rel"
                         }
                     ],
