@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rai-kao/tag-statistic.svg?branch=master)](https://travis-ci.org/rai-kao/tag-statistic)
+[![Build Status](https://travis-ci.com/rai-kao/tag-statistic.svg?branch=master)](https://travis-ci.com/rai-kao/tag-statistic)
 
 # Tag Statistic
 ## Node.js package to parse HTML and show rule defects
