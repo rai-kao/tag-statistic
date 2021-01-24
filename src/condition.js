@@ -2,7 +2,7 @@
 
 var htmlparser = require('htmlparser');
 var sprintf = require("sprintf-js").sprintf;
-var assume = require('assumejs');
+var assume = require('./assume');
 var chaiSubset = require('chai-subset');
 assume.chaiUse(chaiSubset);
 var defaultRules = require("../config/default.json");
