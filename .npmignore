@@ -1,0 +1,7 @@
+.git*
+doc/
+test/
+.idea/
+.travis.yml
+*.swp
+.DS_Storenpm
