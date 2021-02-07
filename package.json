@@ -1,6 +1,6 @@
 {
 	"name": "tag-statistic",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "Node.js package to parse HTML and show rule defects",
 	"main": "lib/filter.js",
 	"directories": {
