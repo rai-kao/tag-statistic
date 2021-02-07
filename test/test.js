@@ -1,6 +1,6 @@
 'use strict';
 var expect = require('chai').expect;
-var Filter = require('../src/filter');
+var Filter = require('../lib/filter');
 
 describe('Validate default rules', function() {
     var filter = new Filter("text");

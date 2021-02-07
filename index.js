@@ -27,7 +27,7 @@ var argv = require('yargs')
             })
             .alias('h', 'help')
             .help('h').argv;
-var Filter = require('./src/filter');
+var Filter = require('./lib/filter');
 var filter = new Filter(argv.out, argv.config);
 
 if (argv.stream) {
