@@ -19,7 +19,7 @@ npm install --save-dev tag-statistic
 
 #### Usage & Examples
 
-```
+```js
 var Filter = require('tag-statistic');
 
 //simple HTML file parsing and printing defects on console
